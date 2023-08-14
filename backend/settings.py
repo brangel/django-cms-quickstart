@@ -141,6 +141,8 @@ CMS_TEMPLATES = [
 
     # serving static files with whitenoise demo
     ('whitenoise-static-files-demo.html', 'Static File Demo'),
+
+    ('index.html', 'PELC'),
 ]
 
 WSGI_APPLICATION = 'backend.wsgi.application'

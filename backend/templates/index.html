@@ -1,0 +1,385 @@
+{% load cms_tags menu_tags sekizai_tags static i18n %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title> PELC-RJ - Plano Estrategico de Logistica e Cargas do Rio de Janeiro </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  {% render_block 'css' %}
+
+</head>
+
+<style>
+
+  #opcoesHeader{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  #opcoesHeader{
+    float:left;
+    color:#fff;
+    font:bold .7em/1em "Trebuchet MS", Arial, Verdana;
+    margin:0;
+    padding:.75em 0 0;
+  }
+  #opcoesHeader.barra{
+    padding:.75em;
+  }
+  #opcoesHeader a{
+    color:#fff;
+    font-style:normal;
+    text-decoration:none;
+  }
+  #opcoesHeader a:hover{
+    color:#00a8e1;
+  }
+  
+  </style>
+
+<body>
+
+
+  {% cms_toolbar %}
+  
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center" id="opcoesHeader">
+        <a href="http://www.rj.gov.br/popupatemporj" target="_blank">RIO POUPA TEMPO NA WEB</a>
+        <span class="barra">|</span>
+        <a href="http://www.rj.gov.br/web/informacaopublica/" target="_blank">INFORMAÇÃO PÚBLICA</a></li> 
+      </div>
+
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="http://www.rj.gov.br/" target="_blank"><img src="{% static 'assets/img/govrj.png' %}" title="Governo do Rio de Janeiro" height="56"/></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="#" class="logo"><img src="{% static 'assets/img/logo.png' %}" alt=""></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#inicio">Início</a></li>
+          <li><a class="nav-link scrollto" href="#historico">Histórico</a></li>
+          <li><a class="nav-link scrollto" href="#governanca">Governanca</a></li>
+          <li><a class="nav-link scrollto " href="#team">Equipe</a></li>
+          <li class="dropdown"><a href="#"><span>Participação Social</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Consulta Pública</a></li>
+              <li><a href="#">Sugestões</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Fale Conosco</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  <section id="inicio" style="padding: 0px;">
+  
+    {% block Carrosel %}
+    {% placeholder "Carrosel" %}
+    {% endblock Carrosel %}
+
+  </section>
+
+  <main id="main">
+
+    <!-- ======= Featured Section ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-center">
+          <div class="col-md-5 col-lg-4">
+            <a href="#team">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="fa fa-users text-primary"></i></div>
+              <h4 class="title">Nossa Equipe</h4> </a>
+            </div>
+          </div>
+
+          <div class="col-md-5 col-lg-4">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <a href="">
+              <div class="icon"><i class="fa fa-scroll text-primary"></i></div>
+              <h4 class="title">Governança</h4></a>
+            </div>
+          </div>
+
+          <div class="col-md-5 col-lg-4">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <a href="">
+              <div class="icon"><i class="fa fa-award text-primary"></i></div>
+              <h4 class="title">Objetivos</h4></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Featured Section -->
+
+    <!-- ======= Historico Section ======= -->
+    <section id="historico" class="historico section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Histórico</h2>
+          <h3>Descubra mais sobre a <span> nossa história</span></h3>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            {% block Historico %}
+                {% placeholder "Historico" %}
+            {% endblock Historico %}
+           
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Historico Section -->
+
+    <!-- ======= Governanca Section ======= -->
+    <section id="governanca" class="governanca">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Governança</h2>
+          <h3>Entenda como nos <span>Organizamos</span></h3>
+
+        </div>
+
+        <div class="row">
+          <div data-aos="fade-up" data-aos-delay="100">
+            {% block Governanca %}
+                {% placeholder "Governanca" %}
+            {% endblock Governanca %}
+           
+          </div>
+          <div data-aos="fade-up" data-aos-delay="100" align="center">
+            <img src="{% static 'assets/img/governanca.png' %}" class="img-fluid">
+          </div>
+          
+        </div>
+
+      </div>
+    </section><!-- End Governanca Section -->
+
+    <!-- ======= Equipe Section ======= -->
+    <section id="team" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Nossa Equipe</h2>
+          <h3><span>Equipe</span> de Gestão</h3>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <h5> Secretario de Transportes</h5>
+              <h4>
+                {% block NomeSecTrans %}
+                  {% placeholder "NomeSecTrans" %}
+                {% endblock NomeSecTrans %}
+            </h4> 
+                {% block DescSecTrans %}
+                {% placeholder "DescSecTrans" %}
+              {% endblock DescSecTrans %}  
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <h5> Subsecretário de Transportes</h5>
+              <h4>
+                {% block NomeSubSecTrans %}
+                  {% placeholder "NomeSubSecTrans" %}
+                {% endblock NomeSubSecTrans %}
+              </h4>
+                {% block DescSubSecTrans %}
+                {% placeholder "DescSubSecTrans" %}
+              {% endblock DescSubSecTrans %}  
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <h5> Conselheiro Fiscal</h5>
+              <h4>
+                {% block NomeConsel %}
+                  {% placeholder "NomeConsel" %}
+                {% endblock NomeConsel %}
+              </h4>
+                {% block DescConsel%}
+                {% placeholder "DescConsel" %}
+              {% endblock DescConsel %}  
+            </div>
+          </div>
+        </div>
+    </section><!-- End Equipe Section -->
+
+
+    <!-- ======= Objetivos Section ======= -->
+    <section id="objetivos" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Objetivos</h2>
+          <h3>Conheça nossos <span>Objetivos</span></h3>
+        </div>
+
+        <h3>Objetivo Principal</h3>
+        <br>
+          <div class="row">
+            <div data-aos="fade-up" data-aos-delay="100" style="padding-bottom: 50px;">
+              {% block Objetivo %}
+                  {% placeholder "Objetivo" %}
+              {% endblock Objetivo %}
+            </div>
+          </div>
+
+        <h3>Objetivos Subjacentes</h3>
+        <div class="row">
+            <div data-aos="fade-up" data-aos-delay="200">
+              {% block ObjetivosSub %}
+                  {% placeholder "ObjetivosSub" %}
+              {% endblock ObjetivosSub %}
+            </div>
+         </div>
+
+      </div>
+    </section><!-- End Objetivos Section -->
+
+    
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+          <div class="section-title">
+            <h2>Contato</h2>
+            <h3><span>Fale Conosco</span></h3>
+          </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email</h3>
+              <p>pelcrj2045@transportes.rj.gov.br</p>
+            </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="info-box  mb-4">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Telefone</h3>
+                  <p>(21) 2547-1397</p>
+                </div>
+              </div>
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nome Completo" required>
+                </div>
+                <div class="col form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" placeholder="Mensagem" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Carregando</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Sua mensagem foi enviada. Obrigada!!</div>
+              </div>
+              <div class="text-center"><button type="submit">Enviar</button></div>
+            </form>
+          </div>
+
+        </div>
+
+
+        
+
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; <strong><span>PELC-RJ</span></strong>. Todos os direitos Reservados.
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+  {% render_block 'js' %}
+
+</body>
+
+</html>
